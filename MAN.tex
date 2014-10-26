@@ -1,0 +1,29 @@
+\documentclass{article}
+\input{hse.sty}
+\input{mechmath.sty}
+\newcommand{\cOm}[1]{\begin{%
+verbatim}#1\end{verbatim}}
+\begin{document}\pagestyle{empty}
+\section*{Как пользоваться командами из mechmath.sty}
+\begin{longtable}{|p{0.47\textwidth}|p{.45\textwidth}|}\hline
+\textbf{Хочется} & \textbf{Реализация}\\\hline
+\[\rad a4\] &\begin{verbatim}\[\rad a4\]\end{verbatim}\\\hline
+\[\raD {\alpha}3{N^2+}\] &\begin{verbatim}\[\raD {\alpha}3{N^2+}\]\end{verbatim}\\\hline
+\[\crad{\left(\frac1}{15N}{\right)^2}4\]&\begin{verbatim}\[\crad{\left(\frac1}{15N}{\right)^2}4\]\end{verbatim}\\\hline
+\[\craD{\left(\frac1}{N}{\right)^9}{3}{j_}{-r}\]&\begin{verbatim}\[\craD{\left(\frac1}{N}%
+{\right)^9}{3}{j_}{-r}\]\end{verbatim}\\\hline
+\[1-1\tfT{+\frac12}2\tfT{-\frac12}2\tfT{+\frac13}3\tfT{-\frac13}3+\ldots\]&\begin{verbatim}\[1-1\tfT{+\frac12}2\tfT{-\frac12}2
+\tfT{+\frac13}3\tfT{-\frac13}3+\ldots\]\end{verbatim}\\\hline
+\[\dI anbn{\le}3\]&\begin{verbatim}\[\dI anbn{\le}3\]\end{verbatim}\\\hline
+\[\DI{x^}k{y_}k{\otimes}3\]&\begin{verbatim}\[\DI{x^}k{y_}k{\otimes}3\]\end{verbatim}\\\hline
+\[\iSum ab2;\quad \iSum xy5\]&\begin{verbatim}\[\iSum ab2;\quad \iSum xy5\]\end{verbatim}\\\hline
+\[\podP anj1;\quad \podP bijk\]&\begin{verbatim}\[\podP anj1;\quad \podP bijk\]\end{verbatim}\\\hline
+\[\poDP anj\]&\begin{verbatim}\[\poDP anj\]\end{verbatim}\\\hline
+$\iY f(x)\,dx;\quad \iY[x_0]g(x)\,dx$&\begin{verbatim}$\iY f(x)\,dx;\quad \iY[x_0]g(x)\,dx$\end{verbatim}\\\hline
+$\IY abf(x)\,dx$&\begin{verbatim}$\IY abf(x)\,dx$\end{verbatim}\\\hline
+\[\ry an;\quad \rY n|a_n|;\quad \RY l1L c_l;\quad \RY n{N+1}{\infty}a_n.\]&\begin{verbatim}\[\ry an;\quad \rY n|a_n|;\quad 
+\RY l1L c_l;\quad \RY n{N+1}{\infty}a_n.\]\end{verbatim}\\\hline
+\[\AR{|S_n^A|}{n=m}{N};\quad\aR{|S_n^B|}n.\]&\begin{verbatim}\[\AR{|S_n^A|}{n=m}{N};\quad\aR{|S_n^B|}n.\]\end{verbatim}\\\hline
+\[f(x)\rsh[x\in P]nA(x);\quad f(x)\xrightarrow[n\to\infty]{x\in P}A(x)\]
+\end{longtable}
+\end{document}

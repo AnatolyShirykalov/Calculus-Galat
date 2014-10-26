@@ -1,0 +1,60 @@
+%<TpX v="5" ArrowsSize="0.7" StarsSize="1" DefaultFontHeight="5" DefaultSymbolSize="30" ApproximationPrecision="0.01" PicScale="1" Border="2" BitmapRes="20000" HatchingStep="2" DottedSize="0.5" DashSize="1" LineWidth="0.3">
+%  <line x1="45.0938" y1="34.7935" x2="45.0938" y2="84.3804" arr2="h40"/>
+%  <line x1="45.0938" y1="34.7935" x2="94.6806" y2="34.7935" arr2="h40"/>
+%  <text x="92.036" y="30.6613" t="$u$" tex="$u$" h="4.13223"/>
+%  <text x="40.4657" y="82.2316" t="$v$" tex="$v$" h="4.13223"/>
+%  <curve closed="1">57.4905,67.8514 82.2839,76.1159 86.4161,59.5869 69.8872,47.1902 65.755,59.5869</curve>
+%  <text x="69.8872" y="67.8514" t="$G$" tex="$G$" h="4.13223"/>
+%  <group>
+%    <curve>115.026,17.7385 144.256,46.9692 192.974,56.7128</curve>
+%    <curve>134.513,7.99489 144.256,23.5846 192.974,56.7128</curve>
+%    <curve>115.026,17.7385 124.769,17.7385 134.513,7.99489</curve>
+%  </group>
+%  <line x1="45.0938" y1="-40.2065" x2="45.0938" y2="9.38036" arr2="h40"/>
+%  <line x1="45.0938" y1="-40.2065" x2="94.6806" y2="-40.2065" arr2="h40"/>
+%  <text x="92.036" y="-44.3387" t="$u$" tex="$\widetilde u$" h="4.1322"/>
+%  <text x="40.4657" y="7.23158" t="$v$" tex="$\tilde v$" h="4.1322"/>
+%  <curve closed="1">57.4905,-7.14859 82.2839,1.11588 86.4161,-15.4131 69.8872,-27.8098 65.755,-15.4131</curve>
+%  <text x="69.8872" y="-7.14859" t="$G$" tex="$\widetilde G$" h="4.1322"/>
+%  <arc arr2="h40" x="39" y="23" d="96.0208" a1="5.73562" a2="6.90586"/>
+%  <text x="58" y="23" t="взаимнооднозначное" h="5"/>
+%  <text x="61" y="18" t="невырожденное" h="5"/>
+%  <arc arr2="h40" x="82" y="40" d="108.462" a1="4.62006" a2="5.94389"/>
+%  <arc arr1="h40" x="84" y="11" d="110.941" a1="0.487836" a2="1.56838"/>
+%  <text x="110" y="61" t="$\overline x$" tex="$\overline x$" h="5"/>
+%  <text x="106" y="-3" t="$\overline x^{\text{н}}$" tex="$\overline x^{\text{н}}$" h="5"/>
+%</TpX>
+\begin{figure}
+\centering
+\ifpdf
+  \setlength{\unitlength}{1bp}%
+  \begin{picture}(443.65, 381.83)(0,0)
+  \put(0,0){\includegraphics{kommut.pdf}}
+  \put(151.85,220.80){\fontsize{11.76}{14.11}\selectfont $u$}
+  \put(5.67,366.98){\fontsize{11.76}{14.11}\selectfont $v$}
+  \put(89.07,326.22){\fontsize{11.76}{14.11}\selectfont $G$}
+  \put(151.85,8.20){\fontsize{11.76}{14.11}\selectfont $\widetilde u$}
+  \put(5.67,154.38){\fontsize{11.76}{14.11}\selectfont $\tilde v$}
+  \put(89.07,113.62){\fontsize{11.76}{14.11}\selectfont $\widetilde G$}
+  \put(55.37,199.08){\fontsize{14.23}{17.07}\selectfont взаимнооднозначное}
+  \put(63.88,184.91){\fontsize{14.23}{17.07}\selectfont невырожденное}
+  \put(202.77,306.80){\fontsize{14.23}{17.07}\selectfont $\overline x$}
+  \put(191.44,125.38){\fontsize{14.23}{17.07}\selectfont $\overline x^{\text{н}}$}
+  \end{picture}%
+\else
+  \setlength{\unitlength}{1bp}%
+  \begin{picture}(443.65, 381.83)(0,0)
+  \put(0,0){\includegraphics{kommut}}
+  \put(151.85,220.80){\fontsize{11.76}{14.11}\selectfont $u$}
+  \put(5.67,366.98){\fontsize{11.76}{14.11}\selectfont $v$}
+  \put(89.07,326.22){\fontsize{11.76}{14.11}\selectfont $G$}
+  \put(151.85,8.20){\fontsize{11.76}{14.11}\selectfont $\widetilde u$}
+  \put(5.67,154.38){\fontsize{11.76}{14.11}\selectfont $\tilde v$}
+  \put(89.07,113.62){\fontsize{11.76}{14.11}\selectfont $\widetilde G$}
+  \put(55.37,199.08){\fontsize{14.23}{17.07}\selectfont взаимнооднозначное}
+  \put(63.88,184.91){\fontsize{14.23}{17.07}\selectfont невырожденное}
+  \put(202.77,306.80){\fontsize{14.23}{17.07}\selectfont $\overline x$}
+  \put(191.44,125.38){\fontsize{14.23}{17.07}\selectfont $\overline x^{\text{н}}$}
+  \end{picture}%
+\fi
+\end{figure}

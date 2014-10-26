@@ -1,0 +1,24 @@
+\label{LEN}
+Пусть функции \(f,\Phi_1,\ldots,\Phi_N\) дважды непрерывно дифференцируемы в окрестности точки \(\ol x_0 = \ve{x^0}{M+N}\), набор \(x_1^0,\ldots,x_{M+N}^0,\lambda_1^0,\ldots,\lambda_N^0\) является
+решением системы
+\[\begin{cases}
+\ds\CP L{x_1} = 0, \ldots, \CP L{x_{M+N}}=0, \\[2ex]
+\ds\CP L{\lambda_1}=\Phi_1=0, \ldots, \CP L{\lambda_N}=\Phi_N=0,
+\end{cases}\]
+где \(L = f(\ol x)+\lambda_1\Phi_1(\ol x)+\ldots+\lambda_N\Phi_N(\ol x)\), \(\rk
+\begin{pmatrix}
+\ds\CP{\Phi_j}{x_k}
+\end{pmatrix}_{\substack{j=1..N \\ k=1..M+N}}\bigg|_{\ol x_0} = N\).
+Положим \(F(\ol x) = L(\ol x,\lambda_1^0,\ldots,\lambda_N^0)\). Рассмотрим ограничение квадратичной формы \(d^2F\big|_{\ol x_0}\) на подпространство \(V\), задаваемое системой уравнений,
+полученных из уравнений связи дифференцированием:
+\[V\colon\begin{cases}
+\ds\CP{\Phi_1}{x_1}\bigg|_{\ol x_0}dx_1 + \ldots + \CP{\Phi_1}{x_{M+N}}\bigg|_{\ol x_0}dx_{M+N}=0;\\
+\dotfill\\
+\ds\CP{\Phi_N}{x_1}\bigg|_{\ol x_0}dx_1 + \ldots + \CP{\Phi_N}{x_{M+N}}\bigg|_{\ol x_0}dx_{M+N}=0.
+\end{cases}\]
+Тогда
+\begin{enumerate}\renewcommand{\labelenumi}{\arabic{enumi})}
+\item если \(d^2F\big|_V\) "--- положительно определённая квадратичная форма, то \(\ol x_0\) "--- точка строгого условного минимума;
+\item если \(d^2F\big|_V\) "--- отрицательно определённая квадратичная форма, то \(\ol x_0\) "--- точка строгого условного максимума;
+\item если \(d^2F\big|_V\) "--- знакопеременная квадратичная форма, то \(\ol x_0\) не является точкой условного экстремума.
+\end{enumerate}

@@ -1,0 +1,209 @@
+%%%%%%%%%%%%%%%%%%%%%%%  ПАКЕТЫ  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{cmap}                               % Чтобы в PDF работал человеческий поиск
+\usepackage[X2,T2A]{fontenc}                    % T2A = русская кодировка. X2 = яти
+\usepackage[utf8]{inputenc}                     % Ввод в универсальной кодировке
+\usepackage{setspace,soulutf8}      		        % Чтобы можно было менять межстрочный и межбуквенный интервалы
+\usepackage{amsmath,amsfonts,amssymb,amsthm}    % Символы для математики
+\usepackage{mathrsfs}                           % Символы для математики
+\usepackage{dsfont}                             % Шрифт для знака индикатора
+\usepackage[subfigure]{tocloft}  % Многоточие в оглавлении
+\usepackage{array,multicol,multirow,bigstrut}   % Чтобы можно было делать в таблице колонки фиксированной ширины, слитные ячейки, вставлять strut'ы.
+\usepackage{indentfirst}                        % Абзацный отступ везде
+\usepackage[british,russian]{babel}                     % Русские переносы, тире, типографика, самодержавие, духовность!
+\usepackage[perpage]{footmisc}                  % Сброс счётчика сносок на каждой странице
+%\usepackage[pdftex,unicode,colorlinks=false,urlcolor=blue]{hyperref} % Ссылки в PDF
+\usepackage{microtype}                          % Свешивающаяся пунктуация и подгонка белого пространства по правилу \pm 2 процента
+\usepackage{textcomp}                           % Чтобы в формулах можно было русские буквы писать через \text{}
+\usepackage[paper=a4paper,top=12.7mm, bottom=12.7mm,left=12.7mm,right=12.7mm,bindingoffset=6.6mm,includehead]{geometry} % Размеры листа и поля
+\usepackage{xcolor}                             % Чтобы можно было цветные объекты вставлять
+\usepackage[pdftex]{graphicx}                   % Чтобы вставились изображения
+\usepackage{float,longtable}                    % Поддержка плавающих таблиц и рисунков
+\usepackage[margin=0pt,font=small,labelfont=bf,labelsep=period]{caption} % Подписи таблиц и рисунком мелкие, жирные, с принятым в русской типографике разделителем.
+\usepackage{rotating}                   % Создание своих акцентов, поворот объекта.
+\usepackage{datetime}                           % Отображение времени
+%\usepackage{embedfile}                          % Чтобы код LaTeXа включился как приложение в PDF-файл
+\usepackage{xspace}
+\usepackage{wrapfig,enumitem}                   % Обтекаемые текстом рисунки
+\usepackage{mathtools}                          % В тексте используется smashoperator, чтобы избежать некрасивых пробелов вокруг сумм и пределов с большим подстрочником
+\usepackage{cancel}                             % Красивое <<вычёркивание>> сокращающихся выражений
+\usepackage{tikz,pgfplots}
+\usepackage{subfigure}
+\usepackage{fancyhdr}							%Колонтитулы
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%  ПАРАМЕТРЫ  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setstretch{1}                          % Межстрочный интервал
+\flushbottom                            % Эта команда заставляет LaTeX чуть растягивать строки, чтобы получить идеально прямоугольную страницу
+\righthyphenmin=2                       % Разрешение переноса двух и более символов
+%\pagestyle{plain}                       % Нумерация страниц снизу по центру.
+\settimeformat{hhmmsstime}              % Формат времени с секундами
+\widowpenalty=300                       % Небольшое наказание за вдовствующую строку (одна строка абзаца на этой странице, остальное --- на следующей)
+\clubpenalty=3000                       % Приличное наказание за сиротствующую строку (омерзительно висящая одинокая строка в начале страницы)
+\setlength{\parindent}{1.5em}           % Красная строка.
+%\embedfile[desc={Исходный код этого файла для LaTeX2e}]{\jobname.tex}                % Включение кода в выходной файл
+%\embedfile[desc={Обязательный стилевой файл}]{../hse.sty}
+%\embedfile[desc={Обязательный стилевой файл}]{../hseafterpreamble.sty}
+%\embedfile[desc={Андрей Викторович Костырка}]{../copyright.sty}
+\setlength{\topsep}{0pt}                % Уничтожение верхнего отступа, если он где проявится
+\renewcommand{\thesubsection}{\arabic{subsection}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%% Это окружение, которое выравнивает по центру без отступа, как у простого center
+\newenvironment{center*}{%
+  \setlength\topsep{0pt}
+  \setlength\parskip{0pt}
+  \begin{center}
+}{%
+  \end{center}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%% Правила переноса неизвестных системе слов (кто её знает?)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Мои макрокоманды для облегчения набора текста
+\newcommand{\E}{\mathbb{E}}                 % Матожидание
+\newcommand{\e}{\varepsilon}                % эпсилон
+\newcommand{\p}{\partial}                   % частная производная
+\newcommand{\PP}{\mathbb{P}}                % Вероятность
+\newcommand{\F}{\mathcal{F}}                % Алгебра F
+\newcommand{\A}{\mathcal{A}}                % Алгебра A
+\newcommand{\B}{\mathcal{B}}                % Алгебра B
+\newcommand{\om}{\omega}                    % омега
+\newcommand{\Om}{\Omega}                    % Омега
+\newcommand{\stderr}{\ensuremath{\text{s.\hspace*{0.2ex}e.}}}
+\newcommand{\bsbeta}{\boldsymbol{\beta}}
+\newcommand{\calN}{\mathcal{N}}             % Курсивные буквы;
+\newcommand{\calF}{\mathcal{F}}
+\newcommand{\calI}{\mathcal{I}}
+\newcommand{\calL}{\mathcal{L}}
+\newcommand{\lagr}{\mathcal{L}}
+\newcommand{\Lagr}{\mathcal{L}}
+\newcommand{\fish}{\mathrm{F}}              % Символ распределения Фишера прямым шрифтом
+\newcommand{\Fish}{\mathrm{F}}
+\newcommand{\unif}{\mathrm{U}}
+\newcommand{\Unif}{\mathrm{U}}
+\newcommand{\taml}{\tilde a_{\text{ML}}}
+\newcommand{\tbml}{\tilde b_{\text{ML}}}
+\newcommand{\hypo}{\mathcal{H}}             % Символ гипотезы
+\renewcommand{\phi}{\varphi}                % Чтоб фи писалась в соответствии с русской традицией
+\newcommand{\ind}[1]{\mathds{1}_{\{#1\}}(\omega)} % Индикатор события [1] в множестве омега
+\newcommand{\inds}[1]{\mathds{1}_{\{#1\}}}        % Индикатор события [1]
+\renewcommand{\to}{\rightarrow}                   % Правильная стрелка вправо (<<стремится>>)
+\newcommand{\sumin}{\sum\limits_{i=1}^n}          % Сумма от i=1 до n
+\newcommand{\ofbr}[1]{\bigl( \{ #1 \} \bigr)}     % Большие круглые, нормальные фигурные скобки вокруг [1] (например, вероятность события)
+\newcommand{\Ofbr}[1]{\Bigl( \bigl\{ #1 \bigr\} \Bigr)} % Больше больших круглые, большие фигурные скобки вокруг аргумента
+\newcommand*{\circled}[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=1pt] (char) {#1};}}
+\renewcommand{\le}{\leqslant}           % Правильное меньше или равно
+\renewcommand{\leq}{\leqslant}           % Правильное меньше или равно
+\renewcommand{\ge}{\geqslant}           % Правильное больше или равно
+\renewcommand{\geq}{\geqslant}           % Правильное больше или равно
+\newcommand{\br}[1]{\left( #1  \right)}    % Круглые скобки, подгоняемые по размеру аргумента
+\newcommand{\fbr}[1]{\left\{ #1  \right\}} % Фигурные скобки, подгоняемые по размеру аргумента
+\newcommand{\eqdef}{\mathrel{\stackrel{\text{def}}=}} % Знак <<равно по определению>>
+\newcommand{\CONST}{\mathbb{C}}
+\newcommand{\DF}{\ensuremath{\mathscr{D}\hspace{-0.3ex}\mathscr{F}}}
+\newcommand{\ttilde}[1]{\tilde{\tilde{#1}}}
+\newcommand{\kk}{\varkappa}
+\newcommand{\assim}{\mathrel{\stackrel{\text{as}}\sim}}
+\newcommand{\iid}{\text{i.\hspace{1pt}i.\hspace{1pt}d.}}
+\renewcommand{\iff}{\,\Leftrightarrow\,}
+\providecommand{\hence}{\Rightarrow}
+\DeclareMathOperator{\const}{const}
+\DeclareMathOperator{\Corr}{Corr}       % Оператор корреляции
+\DeclareMathOperator{\corr}{Corr}
+\DeclareMathOperator{\Cov}{Cov}         % Оператор ковариации
+\DeclareMathOperator{\cov}{Cov}
+\DeclareMathOperator{\Var}{Var}         % Оператор дисперсии
+\DeclareMathOperator{\var}{Var}
+\DeclareMathOperator{\rang}{rank}       % Оператор ранга
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator*{\plim}{plim}      % Оператор предела по вероятности
+\DeclareMathOperator{\sign}{sgn}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\Lin}{Lin}
+\newcommand{\ENGs}[1]{\foreignlanguage{british}{#1}}
+\newcommand{\ENG}{\selectlanguage{british}}
+\newcommand{\RUS}{\selectlanguage{russian}}
+
+\newcommand*{\tabvrulel}[1]{\multicolumn{1}{|c}{#1}} % Ячейка таблицы с центрированным содержимым и единичной прографкой слева
+\newcommand*{\tabvruler}[1]{\multicolumn{1}{c|}{#1}} % Ячейка таблицы с центрированным содержимым и единичной прографкой справа
+\newcommand{\fnnsp}{\hspace{-0.4em}} % Знак сноски принято ставить до всех знаков препинания, кроме ! ? ...
+% А если есть возможность подвинуть низкий знак препинания под сноску, то для этого я и придумал \fnnsp
+
+
+\newcommand{\II}{{\fontencoding{X2}\selectfont\CYRII}}   % I десятеричное (английская i неуместна)
+\newcommand{\ii}{{\fontencoding{X2}\selectfont\cyrii}}   % i десятеричное
+\newcommand{\EE}{{\fontencoding{X2}\selectfont\CYRYAT}}  % ЯТЬ
+\newcommand{\ee}{{\fontencoding{X2}\selectfont\cyryat}}  % ять
+\newcommand{\FF}{{\fontencoding{X2}\selectfont\CYROTLD}} % ФИТА
+\newcommand{\ff}{{\fontencoding{X2}\selectfont\cyrotld}} % фита
+\newcommand{\YY}{{\fontencoding{X2}\selectfont\CYRIZH}}  % ИЖИЦА
+\newcommand{\yy}{{\fontencoding{X2}\selectfont\cyrizh}}  % ижица
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%% Определение разрядки разреженного текста и задание красивых и притом регулируемых многоточий
+% Зачем и почему описано в блоге http://kostyrka.ru/blog
+\newdimen\ellipsiskern
+\setlength{\ellipsiskern}{.1em}
+\newdimen\ellipsiskernen
+\setlength{\ellipsiskernen}{.2em}
+\newcommand{\ldotst}{.\kern\ellipsiskern.\kern\ellipsiskern.}
+\newcommand{\ldotse}{!\kern\ellipsiskern.\kern\ellipsiskern.}
+\newcommand{\ldotsq}{?\kern\ellipsiskern\kern-.11em.\kern\ellipsiskern.}
+\newcommand{\ldotsten}{.\kern\ellipsiskernen.\kern\ellipsiskernen.}
+\newcommand{\ldotspen}{.\kern\ellipsiskernen.\kern\ellipsiskernen.\kern\ellipsiskernen\kern.15em.}
+\newcommand{\ldotseen}{.\kern\ellipsiskernen.\kern\ellipsiskernen.\kern\ellipsiskernen\kern.15em!}
+\newcommand{\ldotsqen}{.\kern\ellipsiskernen.\kern\ellipsiskernen.\kern\ellipsiskernen\kern.067em?}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%% Переопределение рубрикации в целях экономии места %%%%%%%%%%%%%%%%%%%%
+%\makeatletter
+%\renewcommand\subsection{\@startsection {subsection}{1}{\z@}%
+%  {-2ex \@plus -1ex \@minus -.5ex}%
+%  {.3ex \@plus.2ex \@minus -.1ex}%
+%  {\normalfont\large\bfseries}}
+%\makeatother
+%
+%\makeatletter
+%\renewcommand\section{\@startsection {section}{1}{\z@}%
+%  {-3.5ex \@plus -1ex \@minus -.2ex}%
+%  {2.3ex \@plus.2ex}%
+%  {\centering\normalfont\Large\bfseries\textsc}}
+%\makeatother
+%
+%\makeatletter
+%\renewcommand\part{\@startsection {part}{1}{\z@}%
+%  {-3.5ex \@plus -1ex \@minus -.2ex}%
+%  {2.3ex \@plus.2ex}%
+%  {\centering\normalfont\LARGE\bfseries\textsc}}
+%\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%% Команда для переноса на следующую строку символов бинарных операций
+\def\hm#1{#1\nobreak\discretionary{}{\hbox{$#1$}}{}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\let\myfootnote\footnote
+\renewcommand{\footnote}[1]{\myfootnote{\;#1}}
+
+\let\oldleadsto\leadsto
+\renewcommand{\leadsto}{\hspace*{1ex plus .3ex minus .2ex}\Rightarrow\hspace*{1ex plus .3ex minus .2ex}}

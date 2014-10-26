@@ -1,0 +1,31 @@
+%<TpX v="5" ArrowsSize="0.7" StarsSize="1" DefaultFontHeight="5" DefaultSymbolSize="30" ApproximationPrecision="0.01" PicScale="1" Border="2" BitmapRes="20000" HatchingStep="2" DottedSize="0.5" DashSize="1" LineWidth="0.3">
+%  <line x1="30" y1="80" x2="30" y2="30" arr1="h40"/>
+%  <line x1="25" y1="40" x2="100" y2="40" arr2="h40"/>
+%  <polyline lw="3.00">30,40 50,40 60,60 70,40 95,40</polyline>
+%  <text x="97.1" y="42" t="$x$" tex="$x$" h="5"/>
+%  <text x="48" y="35.3" t="$y$" tex="$y$" h="5"/>
+%  <text x="67.6" y="35.3" t="$y+1$" tex="$y+1$" h="5"/>
+%  <text x="24.4" y="58.2" t="$1$" tex="$1$" h="5"/>
+%</TpX>
+\begin{figure}
+\centering
+\ifpdf
+  \setlength{\unitlength}{1bp}%
+  \begin{picture}(238.68, 153.07)(0,0)
+  \put(0,0){\includegraphics{wave.pdf}}
+  \put(211.75,39.69){\fontsize{14.23}{17.07}\selectfont $x$}
+  \put(72.57,20.69){\fontsize{14.23}{17.07}\selectfont $y$}
+  \put(128.13,20.69){\fontsize{14.23}{17.07}\selectfont $y+1$}
+  \put(5.67,85.61){\fontsize{14.23}{17.07}\selectfont $1$}
+  \end{picture}%
+\else
+  \setlength{\unitlength}{1bp}%
+  \begin{picture}(238.68, 153.07)(0,0)
+  \put(0,0){\includegraphics{wave}}
+  \put(211.75,39.69){\fontsize{14.23}{17.07}\selectfont $x$}
+  \put(72.57,20.69){\fontsize{14.23}{17.07}\selectfont $y$}
+  \put(128.13,20.69){\fontsize{14.23}{17.07}\selectfont $y+1$}
+  \put(5.67,85.61){\fontsize{14.23}{17.07}\selectfont $1$}
+  \end{picture}%
+\fi
+\end{figure}

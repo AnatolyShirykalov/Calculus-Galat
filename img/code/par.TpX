@@ -1,0 +1,36 @@
+%<TpX v="5" ArrowsSize="0.7" StarsSize="1" DefaultFontHeight="5" DefaultSymbolSize="30" ApproximationPrecision="0.01" PicScale="1" Border="2" BitmapRes="20000" HatchingStep="2" DottedSize="0.5" DashSize="1" LineWidth="0.3">
+%  <rect x="20.1299" y="39.8701" w="60" h="29.8701"/>
+%  <text x="15.974" y="38.7013" t="$a$" tex="$a$" h="5"/>
+%  <text x="16.2337" y="67.6624" t="$b$" tex="$b$" h="5"/>
+%  <text x="19.0909" y="35.4545" t="$c$" tex="$c$" h="5"/>
+%  <text x="78.3118" y="35.3246" t="$d$" tex="$d$" h="5"/>
+%  <bezier closed="1" ha="6">20.1907,61.2597 21.879,59.4578 26.9615,63.1861 30.5671,61.7545 32.8614,60.8435 35.0594,59.7047 37.3626,58.8159 41.4625,57.2337 45.8253,56.4649 50.2191,56.4282 54.6629,56.3912 59.0861,57.1031 63.2593,58.6322 66.5154,59.8253 69.8526,61.4951 73.1771,60.4689 74.9167,59.9319 76.6066,58.6805 78.3197,59.3669 79.037,59.6542 79.4271,59.2858 80.1159,60.4624 80.1457,60.5135 80.2085,49.3765 80.0929,49.4368 79.731,49.6254 71.5809,41.6396 68.0345,44.8574 66.0476,46.6603 66.4212,50.1006 64.1776,51.653 58.2006,55.7886 54.4899,44.4214 48.9335,45.5921 46.2723,46.1527 45.0158,49.0653 42.6889,50.3673 37.8942,53.0502 32.8499,48.381 27.6284,48.1634 24.6072,48.0375 20.1681,51.0791 20.1681,51.6195 20.1681,51.8793 20.0816,61.3761</bezier>
+%  <text x="32.0271" y="44.7884" t="$\alpha(y)$" tex="$\alpha(y)$" h="5"/>
+%  <text x="42.157" y="58.2949" t="$\beta(y)$" tex="$\beta(y)$" h="5"/>
+%</TpX>
+\begin{figure}
+\centering
+\ifpdf
+  \setlength{\unitlength}{1bp}%
+  \begin{picture}(209.30, 117.18)(0,0)
+  \put(0,0){\includegraphics{par.pdf}}
+  \put(5.67,18.30){\fontsize{14.23}{17.07}\selectfont $a$}
+  \put(6.41,100.40){\fontsize{14.23}{17.07}\selectfont $b$}
+  \put(14.50,9.10){\fontsize{14.23}{17.07}\selectfont $c$}
+  \put(182.37,8.73){\fontsize{14.23}{17.07}\selectfont $d$}
+  \put(51.17,35.56){\fontsize{14.23}{17.07}\selectfont $\alpha(y)$}
+  \put(79.89,73.84){\fontsize{14.23}{17.07}\selectfont $\beta(y)$}
+  \end{picture}%
+\else
+  \setlength{\unitlength}{1bp}%
+  \begin{picture}(209.30, 117.18)(0,0)
+  \put(0,0){\includegraphics{par}}
+  \put(5.67,18.30){\fontsize{14.23}{17.07}\selectfont $a$}
+  \put(6.41,100.40){\fontsize{14.23}{17.07}\selectfont $b$}
+  \put(14.50,9.10){\fontsize{14.23}{17.07}\selectfont $c$}
+  \put(182.37,8.73){\fontsize{14.23}{17.07}\selectfont $d$}
+  \put(51.17,35.56){\fontsize{14.23}{17.07}\selectfont $\alpha(y)$}
+  \put(79.89,73.84){\fontsize{14.23}{17.07}\selectfont $\beta(y)$}
+  \end{picture}%
+\fi
+\end{figure}

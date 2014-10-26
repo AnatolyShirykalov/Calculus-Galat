@@ -1,0 +1,115 @@
+\documentclass{article}
+\input{hse.sty}
+\input{mechmath.sty}
+\newgeometry{paper=a4paper,top=12.7mm, bottom=12.7mm,left=12mm,right=12.7mm,bindingoffset=6.6mm,includefoot}
+\begin{document}
+\pagestyle{plain}
+\section*{Контрольная на начало декабря третьего семестра у Алексея Константиновича}
+\subsection*{Вариант 1}
+\begin{enumerate}
+\item Исследовать на равномерную сходимость
+\begin{enumerate}
+\item $\ds\int\limits_1^{+\infty}e^{-\alpha^2x}\frac{\cos x}{\sqrt x}\,dx$ на множестве $\alpha\in[-1,1]$.
+\begin{enumerate}
+\item Рассмотрим интеграл $\int\limits_1^{+\infty}\frac{\cos x}{\sqrt x}\,dx$.
+\begin{itemize}
+\item $\forall\ b>1\pau\Big|\int\limits_1^b\cos x\,dx\Big|=|\sin b - \sin 1|\le 2$.
+\item $\frac1{\sqrt x}\searrow0$.
+\end{itemize}
+Значит, по признаку Дирихле $\int\limits_1^{+\infty}\frac{\cos x}{\sqrt x}\,dx$ сходится. Так как не зависит от параметра, сходится равномерно.
+\item $e^{-\alpha^2 x}$ монотонна при любом $\alpha$ и $\forall\ x\in[1,+\infty),\forall\ \alpha\in[-1,1]\pau \big|e^{-\alpha^2 x}\big|\le 1$. 
+\end{enumerate}
+Значит, по признаку Абеля равномерной сходимости несобственного интеграла с параметром имеем равномерную сходимость.
+\item $\ds I(\alpha)=\int\limits_0^{+\infty}e^{-\alpha^2(x^2+4)}\arctg \alpha\,dx$ на множестве $\alpha\in\R$. Посмотрим, а куда вообще сходится этот интеграл. Делаем замену $u=\alpha x$, считаем для $\alpha>0$.
+\[I(\alpha)=e^{-4\alpha^2}\frac{\arctg \alpha}{\alpha}\intop_0^{\infty}e^{-u^2}\,du=\frac{\sqrt\pi\arctg \alpha}{2\alpha e^{4\alpha^2}}.\]
+Заметим ещё $I(0)=0$. Тогда $\yo{\alpha}{0+}I(\alpha)=\yo{\alpha}{0+}\frac{\sqrt\pi\arctg \alpha}{2\alpha e^{4\alpha^2}}=\frac{\sqrt{\pi}}2\ne0=I(0)$. Значит, функция $I(\alpha)$ не является непрерывной. Следовательно, сходимость неравномерная.
+\item $\ds\int\limits_0^{+\infty}\frac{\sin x^3}{1+x^{\alpha}}\,dx$ на множестве $\alpha>0$.
+\end{enumerate}
+\item Вычислить
+\begin{enumerate}
+\item $I(\alpha)=\ds\int\limits_0^{+\infty}\frac{\arctg\alpha x}{x(1+x^2)}\,dx=\int\limits_0^{1}\frac{\arctg\alpha x}{x(1+x^2)}\,dx+\int\limits_1^{+\infty}\frac{\arctg\alpha x}{x(1+x^2)}\,dx$.
+\begin{itemize}
+\item Интегрируем неотрицательную функцию, если $\alpha\ge0$. В нуле подынтегральная функция $f(x,\alpha)\sim \alpha$, в бесконечности "--- $f(x,\alpha)\sim \frac{\pi}{2x^3}$. Значит, интеграл сходится при любом фиксированном $\alpha\ge0$; видим, что $I(0)=0$. Отрицательные значения не будем рассматривать, так как функция нечётная.
+\item $\forall\ b,d>0\pau f'_{\alpha}(x,\alpha)=\frac1{(1+\alpha^2x^2)(1+x^2)}\in C\big([0,b]\times[0,d]\big)$. Считаем интеграл для $|\alpha|\ne1$.
+\begin{multline*}\intop_0^{+\infty}f'_{\alpha}(x,\alpha)\,dx=\frac1{1-\alpha^2}\bigg(\intop_0^{+\infty}\frac{dx}{1+x^2}-\intop_0^{+\infty}\frac{\alpha^2}{1+\alpha^2x^2}\,dx\bigg)=\\
+=\frac1{1-\alpha^2}\bigg(\arctg x\Big|_0^{+\infty}-\alpha\arctg\alpha x\Big|_0^{+\infty}\bigg)=\frac1{1-\alpha^2}\left(\frac{\pi}2-\frac{\alpha\pi}2\right)=\frac{\pi}{2(1+\alpha)}.\end{multline*}
+А если всё-таки $|\alpha|=1$, то вспоминаем такие обозначения $I_n=\ds\int\frac1{(1+x^2)^n}\,dx$.
+\[I_1=\int\frac{1}{1+x^2}\,dx=\frac x{1+x^2}+2\int \frac{x^2}{(1+x^2)^2}\,dx=\frac x{1+x^2}+2I_1-2I_2;\quad\imp\quad I_2=\frac12I_1+\frac x{2(1+x^2)}.\]
+Значит, нужный нам интеграл $\int\limits_0^{+\infty}f'_{\alpha}(x,1)\,dx=\frac12\arctg x\Big|_0^{+\infty}+\frac{x}{2(1+x^2)}\Big|_0^{+\infty}=\frac14\pi$. Производная получилась непрерывной. Посчитали интеграл $\int\limits_0^{+\infty}f'_{\alpha}(x,\alpha)\,dx$ с одной особенностью $+\infty$. Подынтегральное выражение мажорируется функцией $\frac1{1+x^4}$ при $x\ge1$. Значит, $\int\limits_1^{+\infty}f'_{\alpha}(x,\alpha)\,dx$ сходится равномерно по признаку Вейерштрасса на $\alpha\ge0$, а интеграл $\int\limits_0^1f'_{\alpha}(x,\alpha)\,dx$ собственный.
+\end{itemize}
+Значит, можно утверждать, что для $\alpha\ge0$ функция $I(\alpha)$ дифференцируема и $I'(\alpha)=\frac{\pi}{2(1+\alpha)}$. Тогда $I(\alpha)=\frac{\pi}2\ln(1+\alpha)+C$. $I(0)=0\imp C=0$. В ответ идёт $I(\alpha)=\sgn\alpha\frac{\pi}2\ln(1+|\alpha|)$.
+\item $I=\ds\int\limits_0^1\frac{dx}{\sqrt[3]{1-x^3}}$. Замена $y=x^3$, $dy=3x^2$, $dx=\frac{dy}{3y^{\frac23}}$.
+\[I=\frac13\intop_0^1y^{\frac13-1}(1-y)^{\frac23-1}\,dy=\frac13{\rm B}\left(1/3,2/3\right)=\frac{\pi}{3\sin\frac{\pi}3}=\frac{2\pi}{3\sqrt3}.\]
+\end{enumerate}
+\end{enumerate}\newpage
+\subsection*{Вариант 2}
+\begin{enumerate}
+\item Исследовать на равномерную сходимость
+\begin{enumerate}
+\item $\ds\int\limits_1^{\infty}\frac{\cos\alpha x}{\sqrt x}\,dx$ на множестве $\alpha>0$.
+
+Особенность у интеграла только одна.
+\begin{itemize}
+\item Частичные интегралы $\forall\ b\in(1,\infty)\pau\int\limits_1^b\cos\alpha x\,dx=\sin \alpha x\Big|_1^{b}=-\sin \alpha b$ равномерно ограничены ограничены по модулю единицей.
+\item Для абсолютно произвольного $\alpha>0$ функция $\frac1{\sqrt x}$, вообще не зависящая от параметра, монотонно стремится к нулю при $x\to\infty$. Так как функция не зависит от параметра, $\frac1{\sqrt x}\rsH[(0,+\infty)]{x\to+\infty}0$.
+\end{itemize}
+
+Значит, по признаку Дирихле равномерной сходимости несобственного интеграла, зависящего от параметра, $\int\limits_1^{+\infty}\frac{\sin\alpha x}{\sqrt x}\,dx\rsH[(0,+\infty_)]{x\to+\infty}$.
+
+\item $\ds\int\limits_0^{+\infty}\frac{x\arctg\frac{\alpha}x}{1+x^2}\,dx$ на множестве $\alpha\in(0,2)$. Что происходит в нуле: $\yo x0\arctg\frac{\alpha}x=\frac{\pi}2$. А в бесконечности: $\yo x{+\infty}x\arctg\frac{\alpha}x=\alpha$.
+\begin{itemize}
+\item Интеграл $\int\limits_0^{\infty}\frac{1}{1+x^2}\,dx=\arctg x\Big|_0^{+\infty}=\frac{\pi}2$ сходится равномерно, так как сходится и подынтегральное выражение не зависит от параметра.
+\item Попробую изо всех сил доказать, что всё остальное $f(x,\alpha)=x\arctg\frac{\alpha}x$ "--- монотонная и равномерно ограниченная на $\alpha\in(0,2)$ функция.
+\[f'_x(x,\alpha)=\arctg\frac{\alpha}x-x\frac{\alpha}{x^2}\frac1{1+\frac{\alpha^2}{x^2}}=\arctg\frac{\alpha}x-\frac{\alpha x}{x^2+\alpha^2};\]
+
+Получается, что $\forall\ \alpha\in(0,2)\pau \yo x{+\infty}f'(x,\alpha)=0-0=0$.
+\begin{multline*}f''_{xx}(x,\alpha)=\frac{-\alpha}{x^2\left(1+\frac{\alpha^2}{x^2}\right)}-\frac{\alpha}{x^2+\alpha^2}+\frac{2\alpha x^2}{(x^2+\alpha^2)^2}=-\frac{2\alpha}{x^2+\alpha^2}+\frac{2\alpha x^2}{(x^2+\alpha^2)^2}=\\=\frac{-2\alpha x^2-2\alpha^3+2\alpha x^2}{(x^2+\alpha^2)^2}=-\frac{2\alpha^3}{(x^2+\alpha^2)^2}<0.\end{multline*}
+
+Отсюда видим, что $\forall\ \alpha\in(0,2)\pau f'_x(x,\alpha)$ монотонно убывает  на множестве $x\in(0,+\infty)$. Значит, $\forall\ \alpha\in(0,2)\pau \exists\ \yo x{+\infty}f'_x(x,\alpha)=\inf\limits_{(0,+\infty)}f'_x(x,\alpha)$. Но мы уже знаем этот предел, значит, мы только что поняли, что $0$ "--- нижняя грань $f'_x(x,\alpha)$ на $(0,+\infty)$. А значит, $f(x,\alpha)$ не убывает.
+
+Когда мы уже знаем, что $f(x,\alpha)$ не убывает, $\forall\ \alpha\in(0,2)\pau \sup\limits_{(0,+\infty)}f(x,\alpha)\hm=\yo x{+\infty} x\arctg\frac{\alpha}x=\alpha<2$. Вот нам и равномерная ограниченность.
+\end{itemize}
+То есть мы доказали равномерную сходимость интеграла по признаку Абеля.
+
+\item $\ds\int\limits_0^1\frac1{x^{\alpha}}\sin\frac1{x^2}\,dx$ на множестве $\alpha\in(0,3)$. Сделаем замену, не зависящую от параметра $x=t^{-\frac12}$, $dx=\frac{-t^{-\frac32}\,dt}2$. Получаем интеграл $\frac12\int\limits_1^{\infty}\frac1{t^{\frac{\alpha-3}2}}\sin t\,dt$. Докажем от противного, что равномерной сходимости нет. Допустим, сходится равномерно. Тогда выполнено условие критерия Коши, то есть
+\[\forall\ \e>0\pau\exists\ b_0\in(1,+\infty)\colon\forall\ b_1,b_2\in(b,+\infty)\pau \bigg|\intop_{b_1}^{b_2}\frac1{t^{\frac{\alpha-3}2}}\sin t\,dx\bigg|<\e.\]
+\begin{itemize}
+\item Зафиксируем $\e=\frac{\pi}{4\sqrt 2}$.
+\item Найдём из критерия Коши $b_0\in(1,+\infty)\colon \forall\ b_1,b_2\in(b,+\infty)\pau \Big|\int\limits_{b_1}^{b_2}\frac1{t^{\frac{\alpha-3}2}}\sin t\,dt\Big|<\e$.
+\item Найдём $n\in\N\colon n>\max\left\{2,\frac{b_0}{2\pi}\right\}$.
+\item Положим $b_1=2\pi n+\frac{\pi}4$, $b_2=2\pi n+\frac{3\pi}4$, $\alpha=3-2\log_{b_2}2$.
+\end{itemize}
+Тогда $\forall\ t\in[b_1,b_2]\pau \sin t\in\left[\frac1{\sqrt2},1\right]$. Подынтегральная функция неотрицательна.
+\[\intop_{b_1}^{b_2}\frac1{t^{\frac{\alpha-3}2}}\sin t\,dt\ge\intop_{b_1}^{b_2}\frac1{b_2^{\frac{\alpha-3}2}}\frac1{\sqrt2}\,dt=\intop_{b_1}^{b_2}\frac12\cdot\frac1{\sqrt 2}\,dt=\frac{b_2-b_1}{2\sqrt 2}=\frac{\pi}{4\sqrt 2}.\]
+%Аргумент синуса бегает по множеству $(0,1)\subset(0,\pi)$. То~есть подынтегральное выражение неотрицательное, можно применить признак сравнения поточечной сходимости. Тогда $\frac1{x^{\alpha}}\sin\frac1{x^2}\sim\frac1{x^{\alpha+2}}$. Значит, интеграл сходится поточечно, если и только если $\alpha+2<1$, то есть только если $\alpha<-1$. На заданном множестве интеграл расходится при любом $\alpha\in(0,3)$.
+\end{enumerate}
+\item Вычислить
+\begin{enumerate}
+\item $\ds I=\int\limits_0^{+\infty}e^{-\sqrt[3]{x}}\,dx$. Делаем замену $\sqrt[3]{x}=y$, $x=y^3$, $dx=3y^2\,dy$. $I\hm=3\int\limits_0^{+\infty}e^{-y}y^{3-1}\,dy\hm=3\Gamma(3)\hm=\Gamma(4)\hm=3!\hm=6$.
+\item $\ds I(\alpha)=\int\limits_0^1\frac{\ln(1-\alpha^2x^2)}{\sqrt{1-x^2}}\,dx$. Подынтегральное выражение определено для всех $x\in[0,1)$ при $|\alpha|\le1$. Если $I(\alpha)$ определена (если интеграл сходится), то $I(\alpha)=I(-\alpha)$, поэтому будем рассматривать $\alpha\in[0,1]$, причём $I(0)=0$, можно заметить сразу. Но так как позже мы увидим проблемы с производной в нуле, будем рассматривать $I(\alpha)$ на полуинтервале $(0,1]$.
+\begin{itemize}
+\item $I(1/2)=\int\limits_0^1\frac{\ln\big(1-(1/2)^2x^2\big)}{\sqrt{1-x^2}}\,dx$ "--- интеграл от неположительной функции, можно оценить числитель $\forall\ x\in[0,1)\pau0\ge\ln\left(1-\frac{x^2}4\right)>-\ln\frac43$, а интеграл $\int\limits_0^1\frac{-\ln\frac43}{\sqrt{1-x^2}}\,dx=-\ln\frac43\arcsin x\Big|_0^1=-\frac{\pi}2\ln\frac43$. Значит, в~одной точке интеграл сходится по признаку сравнения.
+\item Обозначим подынтегральное выражение через $f(x,a)$. Тогда 
+\[f'_{\alpha}(x,\alpha)=\frac{-2\alpha x^2}{(1-\alpha^2x^2)\sqrt{1-x^2}}=\frac2{\alpha}\left(\frac{1-\alpha^2x^2-1}{(1-\alpha^2x^2)\sqrt{1-x^2}}\right)=\frac2{\alpha}\left(\frac1{\sqrt{1-x^2}}-\frac1{(1-\alpha^2x^2)\sqrt{1-x^2}}\right).\]
+
+$\forall\ c,d\in(0,1)\pau f'_{\alpha}(x,\alpha)\in C\big([0,c]\times[d,1]\big)$. Посчитаем интеграл при фиксированном $\alpha\in(0,1)$ с~заменой $x=\sin t$, $dx=\cos t\,dt$.
+\begin{multline*}
+\intop_0^1f'_{\alpha}(x,\alpha)\,dx=\frac{2\arcsin x}{\alpha}\bigg|_0^1-\frac2{\alpha}\intop_0^{\frac{\pi}2}\frac1{1-\alpha^2\sin^2t}\cdot\frac{\cos t}{\cos t}\,dt=\frac{\pi}{\alpha}-\frac2{\alpha}\intop_0^{\frac{\pi}2}\frac1{\frac1{\sin^2t}-\alpha^2}\cdot \frac1{\sin^2t}\,dt=\\
+\cmt{снова замена $u=\ctg t$, $du=\frac{-1}{\sin^2t}\,dt$, $1+u^2=\frac1{\sin^2t}$.}\\
+=\frac{\pi}{\alpha}-\frac2{\alpha}\intop_0^{+\infty}\frac{du}{1+u^2-\alpha^2}=\frac{\pi}{\alpha}-\frac{2\arctg\frac{u}{\sqrt{1-\alpha^2}}}{\alpha\sqrt{1-\alpha^2}}\bigg|_0^{+\infty}=\frac{\pi}{\alpha}\left(1-\frac1{\sqrt{1-\alpha^2}}\right).
+\end{multline*}
+Установим равномерную сходимость интеграла от производной на произвольном вложенном отрезке вида $\alpha\in[d,1-d]\subset(0,1)$, где $d\in(0,1/2)$.
+\[\left|\frac2{\alpha}\left(\frac1{\sqrt{1-x^2}}-\frac1{(1-\alpha^2x^2)\sqrt{1-x^2}}\right)\right|\le\frac2{d}\bigg|\frac2{\sqrt{1-x^2}}\bigg|\]
+Построили мажорирующую функцию, установили равномерную сходимость по признаку Вейерштрасса. Правда на вложенных отрезка.
+\end{itemize}
+
+Получается, что на любом отрезке вида $\alpha\in[d,1-d]\subset (0,1)$ функция $I(\alpha)$ существует, дифференцируема и $I'(\alpha)=\int\limits_0^1f'_{\alpha}(x,\alpha)\,dx=\frac{\pi}{\alpha}\left(1-\frac1{\sqrt{1-\alpha^2}}\right)$. Ну значит, всё на том же произвольном отрезке 
+\begin{multline*}I(\alpha)\hm=\int\frac{\pi}{\alpha}\left(1-\frac1{\sqrt{1-\alpha^2}}\right)\,dx=\pi\ln\alpha-\pi\int\frac1{\alpha^2\sqrt{\frac1{\alpha}-1}}\,d\alpha=\\
+=\pi\left(\ln\alpha+\ln\left(\frac1{\alpha}+\sqrt{\frac1{\alpha^2}-1}\right)\right)+C=\pi\left(\ln\big(1+\sqrt{1-\alpha^2}\big)\right)+C.\end{multline*}
+Теперь надо найти константу. Когда оценивался $I(1/2)$, делал примерно то же самое: \[\forall\ |\alpha|<\frac12,\ \forall\ x\in[0,1)\pau 0\ge\ln\left(1-\alpha^2x^2\right)>-\ln\frac43;\imp \left|\frac{\ln\left(1-\alpha^2x^2\right)}{\sqrt{1-x^2}}\right|\le\frac{\ln4-\ln3}{\sqrt{1-x^2}}.\]
+Делаем третий вывод из сходимости интеграла $\int\limits_0^1\frac{\sqrt{1-x^2}}=\arcsin x\Big|_0^1=\pi/2$. На этот раз можем сказать, что по признаку Вейерштрасса $I(\alpha)$ сходится равномерно на $\alpha\in(-1/2,1/2)$. Значит, $I(\alpha)$ непрерывна, например, в точке $\alpha=0$. То есть \[I(0)=\yo{\alpha}0I(\alpha)=\yo{\alpha}{0+}I(\alpha)=\yo{\alpha}{0+}\pi\left(\ln\big(1+\sqrt{1-\alpha^2}\big)\right)+C; \imp C=-\pi\ln2.\]
+Осталось учесть, что функция чётная. Значит, $\forall\ \alpha\in(-1,1)\pau I(\alpha)=\pi\left(\ln\big(1+\sqrt{1-\alpha^2}\big)\right)-\pi\ln2$.
+\end{enumerate}
+\end{enumerate}
+
+\end{document}

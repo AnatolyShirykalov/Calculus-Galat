@@ -1,0 +1,46 @@
+%<TpX v="5" ArrowsSize="0.7" StarsSize="1" DefaultFontHeight="5" DefaultSymbolSize="30" ApproximationPrecision="0.01" PicScale="1" Border="2" BitmapRes="20000" HatchingStep="2" DottedSize="0.5" DashSize="1" LineWidth="0.3">
+%  <curve closed="1">35,45 25,70 25,85 40,95 65,80 60,60 55,40</curve>
+%  <curve closed="1">123,45 113,70 113,85 130,90 153,80 148,60 135,60</curve>
+%  <line x1="105" y1="75.297" x2="70" y2="75" arr1="h40"/>
+%  <text x="29" y="80" t="$\Omega_{\ol x}$" tex="$\Omega_{\ol x}$" h="5"/>
+%  <text x="137" y="80" t="$\Omega_{\ol x}$" tex="$\Omega_{\ol t}$" h="5"/>
+%  <text x="80" y="76" t="$\ol t(\ol x)$" tex="$\ol t(\ol x)$" h="5"/>
+%  <text x="35" y="65" t="открыто" h="5"/>
+%  <text x="120" y="65" t="открыто" h="5"/>
+%  <text x="67.4" y="70" t="взаимнооднозначное," h="5"/>
+%  <text x="76" y="65" t="непрерывно" h="5"/>
+%  <text x="68.8" y="60" t="дифференцируемое," h="5"/>
+%  <text x="71.2" y="55" t="с якобианом $\ne 0$" tex="с якобианом $\ne 0$" h="5"/>
+%</TpX>
+\begin{figure}
+\centering
+\ifpdf
+  \setlength{\unitlength}{1bp}%
+  \begin{picture}(437.52, 174.70)(0,0)
+  \put(0,0){\includegraphics{zamena.pdf}}
+  \put(20.37,125.59){\fontsize{14.23}{17.07}\selectfont $\Omega_{\ol x}$}
+  \put(326.52,125.59){\fontsize{14.23}{17.07}\selectfont $\Omega_{\ol t}$}
+  \put(164.94,114.25){\fontsize{14.23}{17.07}\selectfont $\ol t(\ol x)$}
+  \put(37.38,83.07){\fontsize{14.23}{17.07}\selectfont открыто}
+  \put(278.33,83.07){\fontsize{14.23}{17.07}\selectfont открыто}
+  \put(129.22,97.24){\fontsize{14.23}{17.07}\selectfont взаимнооднозначное,}
+  \put(153.60,83.07){\fontsize{14.23}{17.07}\selectfont непрерывно}
+  \put(133.19,68.90){\fontsize{14.23}{17.07}\selectfont дифференцируемое,}
+  \put(140.00,54.73){\fontsize{14.23}{17.07}\selectfont с якобианом $\ne 0$}
+  \end{picture}%
+\else
+  \setlength{\unitlength}{1bp}%
+  \begin{picture}(437.52, 174.70)(0,0)
+  \put(0,0){\includegraphics{zamena}}
+  \put(20.37,125.59){\fontsize{14.23}{17.07}\selectfont $\Omega_{\ol x}$}
+  \put(326.52,125.59){\fontsize{14.23}{17.07}\selectfont $\Omega_{\ol t}$}
+  \put(164.94,114.25){\fontsize{14.23}{17.07}\selectfont $\ol t(\ol x)$}
+  \put(37.38,83.07){\fontsize{14.23}{17.07}\selectfont открыто}
+  \put(278.33,83.07){\fontsize{14.23}{17.07}\selectfont открыто}
+  \put(129.22,97.24){\fontsize{14.23}{17.07}\selectfont взаимнооднозначное,}
+  \put(153.60,83.07){\fontsize{14.23}{17.07}\selectfont непрерывно}
+  \put(133.19,68.90){\fontsize{14.23}{17.07}\selectfont дифференцируемое,}
+  \put(140.00,54.73){\fontsize{14.23}{17.07}\selectfont с якобианом $\ne 0$}
+  \end{picture}%
+\fi
+\end{figure}

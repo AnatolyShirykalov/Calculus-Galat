@@ -1,0 +1,22 @@
+    \begin{enumerate}
+        \item \label{q}Пусть $a \in A\dd(B\cap C)$, тогда $a\in A,\ a\notin(B\cap C)$, то есть $a\notin B \cup a\notin C$;
+
+            Если $a\notin B$, то $a\in (A\dd B)$, а~значит $a\in(A\dd B) \cup (A\dd C)$;
+
+            Если $a\notin C$, то $a\in(A\dd C)$, а~значит $a\in (A\dd C)\cup (A\dd B)$;
+
+            То есть $A\dd (B\cap C)\subset (A\dd B)\cup (A\dd C)$;
+
+        \item\label{w} Пусть $a\in (A\dd B)\cup (A\dd C)$;
+
+        $a\in (A\dd B)\cup a\in (A\dd C)$;
+
+        Если $a\in (A\dd B) \hm{\imp} (a\in A)\cap (a\notin B)$, тогда $a\notin (B\cap C) \hm{\imp} a\in A\dd(B\cap C)$;
+
+        Если $a\in (A\dd C) \hm{\imp} (a\in A)\cap (a\notin C)$, тогда $a\notin (B\cap C) \hm{\imp} a\in A\dd(B\cap C)$;
+
+        $A\dd (B\cap C)\supset (A\dd B)\cup (A\dd C)$;
+
+        из~пунктов \ref{q} и \ref{w} следует, что  $A\dd(B\cap C)\hm=A\dd B\cup A\dd C$.
+
+    \end{enumerate}

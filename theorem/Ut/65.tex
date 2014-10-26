@@ -1,0 +1,14 @@
+\label{rile}
+Следующие утверждения эквивалентны:
+\begin{enumerate}
+    \item $\exists\ \lim\limits_{x\to a}f(x)\hm=l\in\ol{\R}$;
+    \item $\lim\limits_{x\to a-}f(x)\hm=\lim\limits_{x\to a+}f(x)\hm=l$.
+\end{enumerate}
+
+\begin{Proof}
+    в~одну сторону: если есть предел по~множеству, есть и по~подмножеству (утверждение \ref{mpod}). В~другую: возьмём меньшую из~дельт, она обслужит и левый и правый пределы.
+   То есть: зафиксируем произвольное $\e\hm>0$. Найдём $\delta_1\hm>0\colon \forall\  x\in (a,a+\delta_1)\pau f(x)\in B_\e(l)$, найдём
+   $\delta_2\hm>0\colon \forall\  x\in (a-\delta_2,a)\pau f(x)\in B_\e(l)$. Тогда $\forall\  x\in \big(a-\min\{\delta_1,\delta_2\},a+\min\{\delta_1,\delta_2\}\big)\pau
+   f(x)\in B_\e(l)$.
+\end{Proof}
+

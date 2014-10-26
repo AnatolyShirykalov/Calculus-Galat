@@ -1,0 +1,46 @@
+%<TpX v="5" ArrowsSize="0.7" StarsSize="1" DefaultFontHeight="5" DefaultSymbolSize="30" ApproximationPrecision="0.01" PicScale="1" Border="2" BitmapRes="20000" HatchingStep="2" DottedSize="0.5" DashSize="1" LineWidth="0.3">
+%  <line x1="10" y1="20" x2="30" y2="40"/>
+%  <line x1="10" y1="20" x2="30" y2="20"/>
+%  <rect x="18.007" y="30.9827" w="2.00002" h="4.99999" rotdeg="314" lw="2.00"/>
+%  <line x1="20.5" y1="32" x2="20.5" y2="25" arr2="h40"/>
+%  <text x="21.5" y="25" t="mg" tex="$mg$" h="5"/>
+%  <line x1="20.5" y1="32" x2="15" y2="36.5" arr2="h40"/>
+%  <text x="10" y="34.5" t="N" tex="$N$" h="5"/>
+%  <line x1="27.9512" y1="39.765" x2="20.5488" y2="32.235" arr1="h40"/>
+%  <text x="23.5" y="40.5" t="Ft" tex="$F_t&apos;$" h="5"/>
+%  <line x1="34" y1="27" x2="48" y2="41" arr2="h40" lw="0.50"/>
+%  <line x1="48" y1="27" x2="34" y2="41" arr2="h40" lw="0.50"/>
+%  <text x="49" y="40" t="x" h="5"/>
+%  <text x="37" y="41" t="y" h="5"/>
+%  <sector x="10" y="20" d="0" a1="0" a2="0"/>
+%  <sector x="10" y="20" d="0" a1="0" a2="0"/>
+%  <sector x="10" y="20" d="0" a1="0" a2="0"/>
+%  <sector x="9.8806" y="19.923" d="14.1422" a1="6.28319" a2="7.06858"/>
+%  <text x="17" y="21" t="a" tex="$\alpha$" h="5"/>
+%</TpX>
+\begin{figure}
+\centering
+\ifpdf
+  \setlength{\unitlength}{1bp}%
+  \begin{picture}(129.31, 82.20)(0,0)
+  \put(0,0){\includegraphics{go.pdf}}
+  \put(38.61,20.07){\fontsize{14.23}{17.07}\selectfont $mg$}
+  \put(6.01,47.00){\fontsize{14.23}{17.07}\selectfont $N$}
+  \put(44.28,64.01){\fontsize{14.23}{17.07}\selectfont $F_t'$}
+  \put(116.56,62.59){\fontsize{14.23}{17.07}\selectfont x}
+  \put(82.54,65.42){\fontsize{14.23}{17.07}\selectfont y}
+  \put(25.85,8.73){\fontsize{14.23}{17.07}\selectfont $\alpha$}
+  \end{picture}%
+\else
+  \setlength{\unitlength}{1bp}%
+  \begin{picture}(129.31, 82.20)(0,0)
+  \put(0,0){\includegraphics{go}}
+  \put(38.61,20.07){\fontsize{14.23}{17.07}\selectfont $mg$}
+  \put(6.01,47.00){\fontsize{14.23}{17.07}\selectfont $N$}
+  \put(44.28,64.01){\fontsize{14.23}{17.07}\selectfont $F_t'$}
+  \put(116.56,62.59){\fontsize{14.23}{17.07}\selectfont x}
+  \put(82.54,65.42){\fontsize{14.23}{17.07}\selectfont y}
+  \put(25.85,8.73){\fontsize{14.23}{17.07}\selectfont $\alpha$}
+  \end{picture}%
+\fi
+\end{figure}

@@ -1,0 +1,279 @@
+\usepackage[pdftex,unicode,bookmarks=true,bookmarksopen=true,colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\usepackage{marvosym}
+\usepackage{ulem}
+\usepackage{bbm}
+\usepackage{accents}
+\usepackage{asymptote}
+\usepackage{wasysym}
+\usepackage{pdfpages}
+
+\makeatletter
+\renewcommand*\l@section[2]{
+\ifnum \c@tocdepth >\z@
+    \addpenalty\@secpenalty
+    \addvspace{1.0em \@plus\p@}%
+    \setlength\@tempdima{2em}%
+    \begingroup
+      \parindent \z@ \rightskip \@pnumwidth
+      \parfillskip -\@pnumwidth
+      \leavevmode \bfseries
+      \advance\leftskip\@tempdima
+      \hskip -\leftskip
+      #1\nobreak\hfil \nobreak\hb@xt@\@pnumwidth{\hss #2}\par
+    \endgroup
+  \fi}
+%\DeclareSymbolFont{largesymbolsA}{U}{pxexa}{m}{n}
+%\SetSymbolFont{largesymbolsA}{bold}{U}{pxexa}{bx}{n}
+%\def\re@DeclareMathSymbol#1#2#3#4{%
+%    \let#1=\undefined
+%    \DeclareMathSymbol{#1}{#2}{#3}{#4}}
+%\re@DeclareMathSymbol{\ointctrclockwiseop}{\mathop}{largesymbolsA}{10}
+%   \def\ointctrclockwise{\ointctrclockwiseop\nolimits}
+\makeatother
+%\usepackage{mathabx}
+%\usepackage{teubner}
+
+%
+%Шаблоны
+
+%\delimitershortfall-1pt
+
+
+\renewcommand{\a}{\langle}
+\newcommand{\s}{\rangle}
+%\newcommand{\gom}{\mathfrak{S}}
+\newcommand{\gom}{$\SpecialForty$}
+\newcommand{\ol}[1]{\overline{#1}}
+\newcommand{\To}[1]{\xrightarrow{#1}}
+\newcommand{\tend}[1]{\xrightarrow[#1]{}}
+\newcommand{\Tot}[1]{\xrightarrow{\text{#1}}}
+\newcommand{\imp}{\hspace{1pt plus1pt}\Rightarrow\hspace{1pt plus1pt}}
+\newcommand{\ifff}{\Leftrightarrow}
+\newcommand{\Uvek}{u_1,\ldots,u_k}
+\newcommand{\Avek}{a^1,\ldots,a^k}
+\newcommand{\Lam}{\lambda_1,\ldots,\lambda_k}
+\newcommand{\Llaa}{\lambda_1 a^1+\ldots+\lambda_k a^k}
+\newcommand{\Llak}{\lambda_1 u_1+\ldots+\lambda_k u_k}
+\newcommand{\Lmuk}{\mu_1 u_1+\dots+\mu_k u_k}
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\lla}{\longleftarrow}
+\newcommand{\llr}{\leftrightarrows}
+\newcommand{\giraf}{\underset{f}{\overset{g}{\leftrightarrows}}}
+\newcommand{\rf}{\overset{f}{\longrightarrow}}
+\newcommand{\rg}{\overset{g}{\longrightarrow}}
+\newcommand{\epr}{\rightsquigarrow}
+\newcommand{\pos}[1]{\big\{{#1}_n\big\}_{n=1}^\infty}
+\newcommand{\ar}[4]{\big\{{#1}_{#2}\big\}_{#2=#3}^{#4}}
+\newcommand{\Har}[4]{\left\{{#1}_{#2}\right\}_{#2=#3}^{#4}}
+\newcommand{\aR}[2]{\big\{#1\big\}_{#2=1}^{\infty}}
+\newcommand{\HaR}[2]{\left\{#1\right\}_{#2=1}^{\infty}}
+\newcommand{\AR}[3]{\big\{#1\big\}_{#2}^{#3}}
+\newcommand{\rk}{\mathrm{rk}}
+\newcommand{\nin}{\notin}
+\newcommand{\nni}{\ \cancel{\ni}\ }
+\newcommand{\dd}{\setminus}
+\newcommand{\nuu}{\overline{\vphantom{<}\quad}\kern-.35em\searrow}
+\newcommand{\nv}{\underline{\vphantom{<}\quad}\kern-.35em\nearrow}
+\newcommand{\q}{\varnothing}
+\renewcommand{\O}{\varnothing}
+\newcommand{\N}{\mathds{N}}
+\newcommand{\Q}{\mathds{Q}}
+\newcommand{\R}{\mathds{R}}
+\newcommand{\T}{\mathbb{T}}
+\renewcommand{\C}{\mathds{C}}
+\newcommand{\eH}{\mathfrak H}
+\newcommand{\Z}{\mathds{Z}}
+\renewcommand{\F}{\Digamma}
+\newcommand{\Ri}{\mathrm{R}}
+\newcommand{\Rim}{\mathcal R}
+\newcommand{\ro}{\mathcal P}
+%\newcommand{\de}{:\kern-.695em\lower-.38ex\hbox{.}\ }
+\makeatletter
+\newcommand*{\relrelbarsep}{.386ex}
+\newcommand*{\relrelbar}{%
+  \mathrel{%
+    \mathpalette\@relrelbar\relrelbarsep
+  }%
+}
+\newcommand*{\@relrelbar}[2]{%
+  \raise#2\hbox to 0pt{$\m@th#1\relbar$\hss}%
+  \lower#2\hbox{$\m@th#1\relbar$}%
+}
+\providecommand*{\rightrightarrowsfill@}{%
+  \arrowfill@\relrelbar\relrelbar\rightrightarrows
+}
+\providecommand*{\leftleftarrowsfill@}{%
+  \arrowfill@\leftleftarrows\relrelbar\relrelbar
+}
+\providecommand*{\xrightrightarrows}[2][]{%
+  \ext@arrow 0359\rightrightarrowsfill@{#1}{#2}%
+}
+\providecommand*{\xleftleftarrows}[2][]{%
+  \ext@arrow 3095\leftleftarrowsfill@{#1}{#2}%
+}
+
+\newcommand{\rsh}[2][P]{\xrightrightarrows[{#2\to\infty}]{#1}}
+\newcommand{\rsH}[2][X]{\xrightrightarrows[{#2}]{#1}}
+\newcommand{\nsh}[2][n]{\xrightarrow[#1\to\infty]{\|\ \|_{#2}}}
+
+\makeatother
+%\newcommand{\de}{\,\begin{sideways}\!.\,\negmedspace.\,\negmedspace.\end{sideways}\,}
+\newcommand{\de}{\mathrel{\hskip.03em\vbox{\baselineskip=2.7pt\lineskiplimit=0pt\kern6pt \hbox{.}\hbox{.}\hbox{.}}\hskip.03em}}         %%%%    ???????
+\newcommand{\defequiv}{\mathbin{\vbox{\baselineskip=1.95pt\lineskiplimit=0pt\hbox{.}\hbox{.}\hbox{.}}\hskip-0.3em\equiv}}
+%\newcommand{\de}{\maya{3}}
+%\newcommand{\de}{:\kern-.695em{\cdot}\ }
+\newcommand{\pre}[3]{\lim\limits_{#2\to\infty}{#1}_{#2}=#3}
+\newcommand{\pr}[2]{\lim\limits_{#2\to\infty}{#1}}
+\newcommand{\oo}{\ol{\ol o}}
+\newcommand{\ou}{\underline{\underline{O}}}
+\newcommand{\ouu}[2]{\underset{#2\ }{\underline{\underline{O}}(#1)}}
+\newcommand{\ooo}[2]{\underset{#2\ }{\ol{\ol o}(#1)}}
+\newcommand{\ooob}[2]{\underset{#2}{\ol{\ol o}\big(#1\big)}}
+\newcommand{\ooog}[2]{\underset{#2}{\underline{\underline O}\big(#1\big)}}
+\newcommand{\te}[1][]{\xrightarrow[n\to\infty]{#1}}
+\newcommand{\TE}{\xrightarrow[N\to\infty]{}}
+\newcommand{\db}[3]{\underset{\substack{#2\\#3}}{#1}}
+\newcommand{\dt}[4]{\underset{\substack{#2\\#3\\#4}}{#1}}
+\newcommand{\dts}[4]{\underset{\substack{#2\\#3\\#4}}{#1}}
+\newcommand{\ub}[3]{\overset{\substack{#3\\#2}}{#1}}
+\newcommand{\tud}[2]{\underset{\substack{\downarrow\\#2}}{#1}}
+\newcommand{\lims}[3]{\underset{\substack{#2\\#3}}{#1}}
+\newcommand{\ums}[3]{\overset{\substack{#2\\#3}}{#1}}
+\newcommand{\gf}[1]{g\big(f(#1)\big)}
+\newcommand{\fg}[1]{f\big(g(#1)\big)}
+\newcommand{\kom}[3]{#1\big(#2(#3)\big)}
+\newcommand{\pzp}[2]{\left(1+\dfrac1{#1}\right)^{#2}}
+
+\newcommand{\yo}[2]{\lim\limits_{#1\to#2}}
+\newcommand{\prb}[2]{\lim\limits_{#2}#1}
+
+\newcommand{\pz}[2]{\left(1+#1\right)^{\frac1{#2}}}
+\newcommand{\pyd}[2]{\lim\limits_{\Delta#2\to0}\dfrac{#1({#2}_0+\Delta#2)-#1({#2}_0)}{\Delta#2}}
+\newcommand{\pydo}[3]{\lim\limits_{\Delta#2\to0#3}\dfrac{#1({#2}_0+\Delta#2)-#1({#2}_0)}{\Delta#2}}
+\newcommand{\py}[2]{\lim\limits_{#2\to{#2}_0}\dfrac{#1(#2)-#1({#2}_0)}{#2-{#2}_0}}
+\newcommand{\pyo}[3]{\lim\limits_{#2\to{#2}_0#3}\dfrac{#1(#2)-#1({#2}_0)}{#2-{#2}_0}}
+\newcommand{\tab}[2]{\begin{tabular}{#1}#2\end{tabular}}
+\newcommand{\pic}[4]{\begin{figure}[htbp]\centering\includegraphics[height=#2cm]{img/final/#1.pdf}\caption{#4}\label{#3}\end{figure}}
+\newcommand{\Pic}[4]{\begin{figure}[H]\centering\includegraphics[height=#2cm]{img/final/#1.pdf}\caption{#4}\label{#3}\end{figure}}
+%\newcommand{\npic}[4]{\begin{figure}[htbp]\centering\includegraphics[height=#2cm]{img/final/#1.pdf}&\includegraphics[height=#2cm]{img/final/#1.pdf}\caption{#4}\label{#3}\end{figure}}
+\newcommand{\ma}[1]{\begin{matrix}#1\end{matrix}}
+\newcommand{\z}{\downarrow}
+\newcommand{\pn}[5]{\sum\limits_{k=#3}^{#4}\dfrac{{#1}^{(k)}(#5)}{k!}(#2-#5)^k}
+
+\newcommand{\rus}[1]{\mbox{\rm{\scriptsize{#1}}}}
+\newcommand{\pau}{\hskip .75em plus.1em minus.08em\relax}
+
+\newcommand{\tire}{"---}
+\newcommand{\sdc}{a_{11}x^2+2a_{12}xy+a_{22}y^2+2a_1x+2a_2y+a_0}
+\newcommand{\Sdc}[1]{a_{11}x_{#1}^2+2a_{12}x_{#1}y_{#1}+a_{22}y_{#1}^2+2a_1x_{#1}+2a_2y_{#1}+a_0}
+%?????????
+% Асимптота!!!!!!!!!!!!!!!!!!!!!
+
+\newcommand{\inz}{\bowtie}
+
+%???????:
+\newcommand{\VEC}[1]{\overrightarrow{#1}}
+\newcommand{\mn}[4]{#1(#2)={#3}_{#4}{#2}^{#4}+\ldots+{#3}_0}
+\newcommand{\Mn}[4]{#1(#2)={#3}_{#4}{#2}^{#4}+{#3}_{#4-1}{#2}^{#4-1}\ldots+{#3}_{1}{#2}+{#3}_0}
+
+\newcommand{\tp}{точная первообразная}
+\newcommand{\op}{обобщённая первообразная}
+\newcommand{\oP}{\int\limits_0^{\pi}}
+\newcommand{\mpP}{\int\limits_{-\pi}^{\pi}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\Cn}[2]{\overset{#2}{\cancel{#1}}}
+\newcommand{\ve}[2]{(#1_1,\ldots,#1_{#2} )} % \ve xn |---> (x_1,\ldots, x_n)
+\newcommand{\vem}[3]{(#1_1,\ldots,#1_{#2},\ldots,#1_{#3} )}
+\newcommand{\vef}[3]{#1_1#2,\ldots,#1_{#3}{#2} }
+\newcommand{\Til}[1]{\widetilde{#1}{} }
+\newcommand{\TTil}[1]{\widetilde{\widetilde{#1}}{} }
+\newcommand{\D}[1]{\overline{\Delta #1}}
+\newcommand{\CP}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\Jacoby}[4]{\begin{pmatrix}
+\CP {{#1}_{1}}{{#2}_1} 	& \CP{{#1}_{1}}{{#2}_2} & \dots & \CP{{#1}_{1}}{{#2}_{#3}} \\[1ex]
+\CP {{#1}_{2}}{{#2}_1} 	& \CP{{#1}_{2}}{{#2}_2} & \dots & \CP{{#1}_{2}}{{#2}_{#3}} \\
+\vdots 			& \vdots		& \ddots& \vdots \\
+\CP {{#1}_{#4}}{{#2}_1} & \CP{{#1}_{#4}}{{#2}_2}& \dots & \CP{{#1}_{#4}}{{#2}_{#3}}
+\end{pmatrix}}
+\newcommand{\jacoby}[4]{\begin{pmatrix}
+\CP {{#1}_{1}}{{#2}_1} 	& \dots & \CP{{#1}_{1}}{{#2}_#3} & \CP{{#1}_{1}}{{#2}_{#3+1}} \\
+\vdots 			& \ddots& \vdots		 & \vdots \\
+\CP {{#1}_{#4}}{{#2}_1} & \dots & \CP{{#1}_{#4}}{{#2}_#3}& \CP{{#1}_{#4}}{{#2}_{#3+1}} \\[1ex]
+\CP {{#1}_{#4+1}}{{#2}_1} & \dots & \CP{{#1}_{#4+1}}{{#2}_#3}& \CP{{#1}_{#4+1}}{{#2}_{#3+1}}
+\end{pmatrix}}
+
+\newcounter{rad}
+\setcounter{rad}{1}
+% a_1+a_2+\ldots
+	\def\rad#1#2{\ifnum \therad < \the\numexpr(#2 + 1)\relax #1_\therad + \addtocounter{rad}{1} \rad{#1}{#2}\else \ldots \fi \setcounter{rad}{1}}
+%a_{N+1}+a_{N+2}+\ldots
+	\def\raD#1#2#3{\ifnum \therad < \the\numexpr(#2 + 1)\relax #1_{#3{\therad}} + \addtocounter{rad}{1} \raD{#1}{#2}{#3}\else \ldots \fi \setcounter{rad}{1}}
+
+\newcommand{\ry}[3][1]{\sum\limits_{{#3}={#1}}^\infty {#2}_{#3}}
+\newcommand{\rY}[2][1]{\sum\limits_{{#2}={#1}}^\infty}
+\newcommand{\RY}[3]{\sum\limits_{#1 = #2}^{#3}}
+%\left(\frac11\right)^2+\left(\frac12\right)^2+\left(\frac13\right)^2+\ldots+\left(\frac1{N+1}\right)^2
+	\def\crad#1#2#3#4{\ifnum \therad < \the\numexpr(#4 + 1)\relax #1{\therad}#3 + \addtocounter{rad}{1} \crad{#1}{#2}{#3}{#4}\else \ldots +#1{#2}#3 \fi \setcounter{rad}{1}}
+%\left(\frac1{n+1-j}\right)^2+\left(\frac1{n+2-j}\right)^2+\left(\frac1{n+3-j}\right)^2+\ldots+\left(\frac1{n+N+1-j}\right)^2
+	\def\craD#1#2#3#4#5#6{\ifnum \therad < \the\numexpr(#4 + 1)\relax #1{#5{\therad}#6}#3 + \addtocounter{rad}{1} \craD{#1}{#2}{#3}{#4}{#5}{#6}\else \ldots +#1{#5#2#6}#3  \fi \setcounter{rad}{1}}
+%repeat argument #1 #2 times
+	\def\tfT#1#2{\ifnum \therad < \the\numexpr(#2 + 1)\relax #1\addtocounter{rad}{1} \tfT{#1}{#2}\else \fi \setcounter{rad}{1}}
+
+\newcommand{\aee}[1][\varepsilon > 0]{\forall\ #1\pau \exists\ }
+%a_1\le a_2\le a_3\le \ldots\le a_n
+	\def\dI#1#2#3#4#5#6{\ifnum \therad < \the\numexpr(#6 + 1)\relax {#1}_{\therad}{#3}_{\therad}#5\addtocounter{rad}{1} \dI{#1}{#2}{#3}{#4}{#5}{#6}\else \dots #5{#1}_{#2}{#3}_{#4}\fi \setcounter{rad}{1}}
+%x^1y_1\otimes x^2y_2 \otimes x^3y_3 \otimes \dots \otimes x^ky_k
+	\def\DI#1#2#3#4#5#6{\ifnum \therad < \the\numexpr(#6 + 1)\relax #1\therad#3\therad#5\addtocounter{rad}{1} \DI{#1}{#2}{#3}{#4}{#5}{#6}\else \dots #5#1#2#3#4\fi \setcounter{rad}{1}}
+%192-1 туфли классические пакет с классическими брюками
+
+%a_1b_3+a_2b_2+a_3b_1
+\def\iSum#1#2#3{\ifnum \therad < #3\relax {#1}_{\therad}{#2}_{\the\numexpr(#3 - \therad + 1)\relax}+ \addtocounter{rad}{1}\iSum{#1}{#2}{#3}\else {#1}_{\therad}{#2}_{1}\fi \setcounter{rad}{1}}
+
+\def\tms#1#2{\ifnum \therad < \the\numexpr(#2 + 1)\relax #1_\therad \ifnum \therad < \the\numexpr(#2)\relax \cdot \else \fi\addtocounter{rad}{1} \tms{#1}{#2}\else \cdots \fi \setcounter{rad}{1}}
+\def\ctms#1#2#3#4#5{\ifnum \therad < \the\numexpr(#4 + 1)\relax #1{#2\therad}#3 \ifnum \therad < \the\numexpr(#4)\relax \cdot \else \fi\addtocounter{rad}{1} \ctms{#1}{#2}{#3}{#4}{#5}\else \cdots #1{#2#5}#3\fi \setcounter{rad}{1}}
+\newcommand{\tmy}[2]{\prod\limits_{#2=1}^{\infty}#1_{#2}}
+\newcommand{\tmY}[1]{\prod\limits_{#1=1}^{\infty}}
+\newcommand{\tMY}[2][n]{\prod\limits_{#1=#2}^{\infty}}
+
+\newcommand{\podP}[5][\infty]{\big\{{#2}_{{#3}_{#4}}\big\}_{#4=#5}^{#1}}
+\newcommand{\poDP}[4][\infty]{\big\{{#2}_{{#3}_{#4}}\big\}_{#4=1}^{#1}}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\osc}{osc}
+\DeclareMathOperator{\grad}{grad}
+\DeclareMathOperator{\intS}{int}
+\DeclareMathOperator{\ext}{ext}
+\DeclareMathOperator{\rot}{rot}
+\DeclareMathOperator{\cur}{cur}
+\DeclareMathOperator{\divergence}{div}
+\renewcommand{\Re}{\mathop{\text{Re}}}
+\renewcommand{\Im}{\mathop{\text{Im}}}
+\newcommand{\bou}[1]{\partial #1}
+\newcommand{\mea}[1]{\mu #1}
+\newcommand{\Mea}[1]{\mu \left(#1\right)}
+
+
+\newenvironment{iItems}{\begin{enumerate}\let\AEtheenumi\theenumi{}\renewcommand{\theenumi}{\roman{enumi}}\renewcommand{\labelenumi}{(\theenumi)}}{\renewcommand{\labelenumi}{\theenumi.}\renewcommand{\theenumi}{\AEtheenumi}\end{enumerate}}
+\newenvironment{azItems}{\begin{enumerate}\let\AEtheenumi\theenumi{}\renewcommand{\theenumi}{\asbuk{enumi}}\renewcommand{\labelenumi}{(\theenumi)}}{\renewcommand{\labelenumi}{\theenumi.}\renewcommand{\theenumi}{\AEtheenumi}\end{enumerate}}
+\newenvironment{roItems}{\begin{enumerate}\renewcommand{\labelenumi}{(\theenumi)}}{\renewcommand{\labelenumi}{\theenumi.}\end{enumerate}}
+\newenvironment{oItems}{\begin{roItems}\setcounter{enumi}{-1}}{\end{roItems}}
+
+\newcommand{\iY}[1][1]{\ds\int\limits_{#1}^{\infty}}
+\newcommand{\IY}[2]{\ds\int\limits_{#1}^{#2}}
+\newcommand{\cSize}{\footnotesize}
+\newcommand{\cmt}[1]{\text{\cSize #1}}
+
+\newcommand{\far}[3]{\big\{#1_{#2}(#3)\big\}_{#2=1}^{\infty}}
+\newcommand{\Aq}{\mathfrak A}
+\newcommand{\Tau}{\mathcal T}
+%\newcommand{\overcirc}[1]{\mathring{#1}}%http://tex.stackexchange.com/questions/3266/how-do-i-use-a-circle-as-a-math-accent-larger-than-mathring
+\newcommand{\overcirc}[1]{\accentset{\circ}{#1}}
+\newcommand{\overstar}[1]{\accentset{\bigstar}{#1}}
+
+
+\newcommand{\W}{\Omega}
+\newcommand{\Ax}[3][]{#1 #2_{\ol #3}}
+\newcommand{\Kprod}{\wedge}
+\newcommand{\KP}{\Kprod}
+\newcommand{\lom}{\mathrm{lom}}
+

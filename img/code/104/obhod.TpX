@@ -1,0 +1,33 @@
+%<TpX v="5" ArrowsSize="0.7" StarsSize="1" DefaultFontHeight="5" DefaultSymbolSize="30" ApproximationPrecision="0.01" PicScale="1" Border="2" BitmapRes="20000" HatchingStep="2" DottedSize="0.5" DashSize="1" LineWidth="0.3">
+%  <curve>39,65 59,81 72,85</curve>
+%  <curve>49,55 62,68 76,76</curve>
+%  <curve>72,85 73,81 76,76</curve>
+%  <curve>39,65 45,60 49,55</curve>
+%  <curve>72,85 83,85 103,58</curve>
+%  <curve>76,76 82,71 85,57</curve>
+%  <curve>85,57 95,59 103,58</curve>
+%  <curve arr2="h40">101,63 99,70 79,84</curve>
+%  <curve arr2="h40">79,77 86,69 88,60</curve>
+%  <curve arr2="h40">90,60 94,61 99,60</curve>
+%  <curve arr2="h40">74.6,83.8 75.6,80.8 77.6,77.8</curve>
+%  <curve arr2="h40">72,77 71,80 71,83</curve>
+%  <curve arr2="h40">68,82 58,78 43,66</curve>
+%  <curve arr2="h40">50,59 59,69 71,76</curve>
+%  <curve arr2="h40">44,65 47,62 49,59</curve>
+%  <line x1="59" y1="74" x2="51" y2="89" arr2="h40"/>
+%  <line x1="89" y1="74" x2="107" y2="87" arr2="h40"/>
+%</TpX>
+\begin{figure}
+\centering
+\ifpdf
+  \setlength{\unitlength}{1bp}%
+  \begin{picture}(204.09, 107.72)(0,0)
+  \put(0,0){\includegraphics{obhod.pdf}}
+  \end{picture}%
+\else
+  \setlength{\unitlength}{1bp}%
+  \begin{picture}(204.09, 107.72)(0,0)
+  \put(0,0){\includegraphics{obhod}}
+  \end{picture}%
+\fi
+\end{figure}

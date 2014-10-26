@@ -1,0 +1,13 @@
+#! /bin/sh
+if [ -r Galat.aux ]; then
+cp Galat.aux TRASH
+else
+touch TRASH
+fi
+make
+res=$?
+diff Galat.aux TRASH
+rc=$?
+[ "$rc" != 0 ]  && /usr/local/texlive/2013/bin/x86_64-linux/pdflatex Galat.tex
+rm -rf TRASH
+[ "$res" == 0 ] && cp -u Galat.pdf ../MechMathDocs/Calculus/Galat.pdf

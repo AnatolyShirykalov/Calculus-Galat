@@ -1,0 +1,48 @@
+%<TpX v="5" ArrowsSize="0.7" StarsSize="1" DefaultFontHeight="5" DefaultSymbolSize="30" ApproximationPrecision="0.01" PicScale="1" Border="2" BitmapRes="20000" HatchingStep="2" DottedSize="0.5" DashSize="1" LineWidth="0.3">
+%  <line x1="40" y1="30" x2="40" y2="90" arr2="h40"/>
+%  <line x1="40" y1="30" x2="100" y2="30" arr2="h40"/>
+%  <text x="96.8" y="25" t="$u$" tex="$u$" h="5"/>
+%  <text x="34.4" y="87.4" t="$v$" tex="$v$" h="5"/>
+%  <curve closed="1">55,70 85,80 90,60 70,45 65,60</curve>
+%  <text x="58" y="55" t="$\Gamma$" tex="$\Gamma$" h="5"/>
+%  <text x="70" y="70" t="$G$" tex="$G$" h="5"/>
+%  <line x1="150" y1="40" x2="150" y2="95" arr2="h40"/>
+%  <line x1="150" y1="40" x2="200" y2="65" arr2="h40"/>
+%  <line x1="150" y1="40" x2="175" y2="25" arr2="h40"/>
+%  <curve>155,70 170,85 195,90</curve>
+%  <curve>165,65 170,73 195,90</curve>
+%  <curve>155,70 160,70 165,65</curve>
+%  <line x1="170" y1="80" x2="175" y2="84" arr2="h40"/>
+%  <line x1="170" y1="80" x2="165.5" y2="82.5" arr2="h40"/>
+%  <text x="169" y="22.4" t="$x$" tex="$x$" h="5"/>
+%  <text x="198.4" y="60" t="$y$" tex="$y$" h="5"/>
+%  <text x="145" y="92" t="$z$" tex="$z$" h="5"/>
+%</TpX>
+\begin{figure}
+\centering
+\ifpdf
+  \setlength{\unitlength}{1bp}%
+  \begin{picture}(497.48, 222.80)(0,0)
+  \put(0,0){\includegraphics{surface.pdf}}
+  \put(182.55,16.10){\fontsize{14.23}{17.07}\selectfont $u$}
+  \put(5.67,192.98){\fontsize{14.23}{17.07}\selectfont $v$}
+  \put(72.57,101.14){\fontsize{14.23}{17.07}\selectfont $\Gamma$}
+  \put(106.58,143.66){\fontsize{14.23}{17.07}\selectfont $G$}
+  \put(387.21,8.73){\fontsize{14.23}{17.07}\selectfont $x$}
+  \put(470.55,115.31){\fontsize{14.23}{17.07}\selectfont $y$}
+  \put(319.18,206.02){\fontsize{14.23}{17.07}\selectfont $z$}
+  \end{picture}%
+\else
+  \setlength{\unitlength}{1bp}%
+  \begin{picture}(497.48, 222.80)(0,0)
+  \put(0,0){\includegraphics{surface}}
+  \put(182.55,16.10){\fontsize{14.23}{17.07}\selectfont $u$}
+  \put(5.67,192.98){\fontsize{14.23}{17.07}\selectfont $v$}
+  \put(72.57,101.14){\fontsize{14.23}{17.07}\selectfont $\Gamma$}
+  \put(106.58,143.66){\fontsize{14.23}{17.07}\selectfont $G$}
+  \put(387.21,8.73){\fontsize{14.23}{17.07}\selectfont $x$}
+  \put(470.55,115.31){\fontsize{14.23}{17.07}\selectfont $y$}
+  \put(319.18,206.02){\fontsize{14.23}{17.07}\selectfont $z$}
+  \end{picture}%
+\fi
+\end{figure}

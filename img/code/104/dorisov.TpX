@@ -1,0 +1,22 @@
+%<TpX v="5" ArrowsSize="0.7" StarsSize="1" DefaultFontHeight="5" DefaultSymbolSize="30" ApproximationPrecision="0.01" PicScale="1" Border="2" BitmapRes="20000" HatchingStep="2" DottedSize="0.5" DashSize="1" LineWidth="0.3">
+%  <line x1="100" y1="0" x2="100" y2="95" arr2="h40"/>
+%  <line x1="52.5" y1="49.8" x2="147.5" y2="49.8" arr2="h40"/>
+%  <polyline>90,60 110,60 110,53 114,53 114,46 110,46 110,40 90,40 90,60</polyline>
+%  <polyline>84,66 116,66 116,53 120,53 120,46 116,46 116,34 84,34 84,66</polyline>
+%  <polyline>79,71 121,71 121,53 125,53 125,46 121,46 121,29 79,29 79,71</polyline>
+%  <polyline>73,77 127,77 127,53 131,53 131,46 127,46 127,23 73,23 73,77</polyline>
+%</TpX>
+\begin{figure}
+\centering
+\ifpdf
+  \setlength{\unitlength}{1bp}%
+  \begin{picture}(280.63, 280.63)(0,0)
+  \put(0,0){\includegraphics{dorisov.pdf}}
+  \end{picture}%
+\else
+  \setlength{\unitlength}{1bp}%
+  \begin{picture}(280.63, 280.63)(0,0)
+  \put(0,0){\includegraphics{dorisov}}
+  \end{picture}%
+\fi
+\end{figure}
