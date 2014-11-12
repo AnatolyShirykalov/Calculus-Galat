@@ -24,7 +24,6 @@ $\IY abf(x)\,dx$&\begin{verbatim}$\IY abf(x)\,dx$\end{verbatim}\\\hline
 \[\ry an;\quad \rY n|a_n|;\quad \RY l1L c_l;\quad \RY n{N+1}{\infty}a_n.\]&\begin{verbatim}\[\ry an;\quad \rY n|a_n|;\quad 
 \RY l1L c_l;\quad \RY n{N+1}{\infty}a_n.\]\end{verbatim}\\\hline
 \[\AR{|S_n^A|}{n=m}{N};\quad\aR{|S_n^B|}n.\]&\begin{verbatim}\[\AR{|S_n^A|}{n=m}{N};\quad\aR{|S_n^B|}n.\]\end{verbatim}\\\hline
-\[f(x)\rsh[x\in P]nA(x);\quad f(x)\xrightarrow[n\to\infty]{x\in P}A(x)\]& \begin{verbatim}\[f(x)\rsh[x\in P]nA(x);\quad 
-f(x)\xrightarrow[n\to\infty]{x\in P}A(x)\]\end{verbatim}\\\hline
+\[f(x)\rsh[x\in P]nA(x);\quad f(x)\xrightarrow[n\to\infty]{x\in P}A(x)\]& \begin{verbatim}\[f(x)\rsh[x\in P]nA(x);\quad f(x)\xrightarrow[n\to\infty]{x\in P}A(x)\]\end{verbatim}\\\hline
 \end{longtable}
 \end{document}
